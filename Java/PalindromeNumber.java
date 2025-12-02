@@ -1,0 +1,22 @@
+class Solution {
+    public boolean isPalindrome(int x) {
+        if(x<0){
+            return false;
+        }
+        else{
+            int temp=x;
+            int y=0;
+            while(temp>0){
+                int d=temp%10;
+                y=(y*10)+d;
+                temp/=10;
+            }
+            if(y==x){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+    }
+}
